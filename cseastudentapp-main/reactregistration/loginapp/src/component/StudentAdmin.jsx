@@ -8,7 +8,7 @@ import React, { useState } from 'react'
      const sid=e.target.sid.value;
       //alert(sid);
       if(sid=='*'){
-       const data=await fetch("http://localhost:3002/admin/show");
+       const data=await fetch("https://appfsd-1.onrender.com/admin/show");
                    const res=await data.json();
                    console.log(res.msg);
                    setStudentData(res.msg);
