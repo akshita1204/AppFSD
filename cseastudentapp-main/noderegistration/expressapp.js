@@ -2,7 +2,9 @@ const express=require('express');
 const cors=require('cors');
 const fs=require('fs').promises;
 const app=express();
+const dbconn=require('./database/dbConn')
 const port=3002;
+dbconn();//database connection
 app.use(express.json()); // middleware
 app.use(cors()); //allow cross origing request
 app.post('/login',(req,res)=>{
